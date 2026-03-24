@@ -512,4 +512,33 @@ video {
   .project-video-box {
     max-width: 100%;
   }
+  .gallery-top-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+  margin-top: 1.25rem;
+}
+
+.gallery-intro-text {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  padding: 1.25rem 1.35rem;
+}
+
+.gallery-intro-text p {
+  margin: 0 0 1rem;
+  color: var(--muted);
+}
+
+.gallery-intro-text p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  .gallery-top-layout {
+    grid-template-columns: 1fr;
+  }
 }
