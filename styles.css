@@ -355,9 +355,14 @@ video {
   padding: 3rem 0 1.5rem;
 }
 
-.gallery-page-header p {
+.gallery-page-header h2 {
+  margin-bottom: 0.8rem;
+}
+
+.gallery-page-header > p {
   color: var(--muted);
-  max-width: 760px;
+  max-width: 900px;
+  margin-bottom: 1.5rem;
 }
 
 .back-link {
@@ -368,11 +373,42 @@ video {
   font-weight: 700;
 }
 
+.gallery-top-layout {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 1.5rem;
+  align-items: stretch;
+  margin-top: 1.5rem;
+}
+
+.gallery-intro-text {
+  background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  padding: 1.45rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.gallery-intro-text p {
+  margin: 0 0 1rem;
+  color: #445166;
+  text-align: justify;
+  line-height: 1.8;
+}
+
+.gallery-intro-text p:last-child {
+  margin-bottom: 0;
+}
+
 .gallery-page-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
   padding-bottom: 4rem;
+  margin-top: 2rem;
 }
 
 .gallery-page-grid figure {
@@ -395,14 +431,14 @@ video {
 
 /* Project videos */
 .project-video-wrap {
-  margin-top: 1.25rem;
+  margin-top: 0;
 }
 
 .project-video-box {
   width: 100%;
-  max-width: 760px;
-  margin: 0 auto;
-  border-radius: 18px;
+  max-width: none;
+  margin: 0;
+  border-radius: 20px;
   overflow: hidden;
   border: 1px solid var(--line);
   box-shadow: var(--shadow);
@@ -462,16 +498,13 @@ video {
   }
 
   .two-col,
-  .contact-grid {
+  .contact-grid,
+  .gallery-top-layout {
     grid-template-columns: 1fr;
   }
 
   .hero {
     min-height: 78vh;
-  }
-
-  .project-video-box {
-    max-width: 680px;
   }
 }
 
@@ -509,36 +542,7 @@ video {
     width: 100%;
   }
 
-  .project-video-box {
-    max-width: 100%;
-  }
-  .gallery-top-layout {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-  align-items: start;
-  margin-top: 1.25rem;
-}
-
-.gallery-intro-text {
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  box-shadow: var(--shadow);
-  padding: 1.25rem 1.35rem;
-}
-
-.gallery-intro-text p {
-  margin: 0 0 1rem;
-  color: var(--muted);
-}
-
-.gallery-intro-text p:last-child {
-  margin-bottom: 0;
-}
-
-@media (max-width: 900px) {
-  .gallery-top-layout {
-    grid-template-columns: 1fr;
+  .gallery-intro-text {
+    padding: 1.15rem 1.1rem;
   }
 }
