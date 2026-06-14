@@ -546,3 +546,112 @@ video {
     padding: 1.15rem 1.1rem;
   }
 }
+/* Conferences and seminars */
+.conference-section {
+  display: grid;
+  gap: 2rem;
+  padding-bottom: 4rem;
+}
+
+.conference-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.conference-content {
+  padding: 1.6rem;
+}
+
+.conference-date {
+  display: inline-block;
+  margin-bottom: 0.8rem;
+  color: var(--primary-dark);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.conference-content h3 {
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+}
+
+.conference-content p {
+  color: #445166;
+  text-align: justify;
+  line-height: 1.8;
+  margin: 0 0 1rem;
+}
+
+.conference-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.5rem;
+  padding: 0.82rem 1.05rem;
+  border-radius: 14px;
+  border: 1px solid #0f4c81;
+  background: #eef5fb;
+  color: #0f4c81;
+  font-weight: 700;
+  transition: 0.22s ease;
+  box-shadow: 0 6px 16px rgba(15, 76, 129, 0.10);
+}
+
+.conference-link:hover {
+  background: #0f4c81;
+  color: #ffffff;
+  border-color: #0f4c81;
+  transform: translateY(-1px);
+}
+
+.conference-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 0 1.6rem 1.6rem;
+}
+
+.conference-gallery figure {
+  margin: 0;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+
+.conference-gallery img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.conference-gallery figcaption {
+  padding: 0.75rem 0.9rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+@media (max-width: 1000px) {
+  .conference-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .conference-content {
+    padding: 1.2rem;
+  }
+
+  .conference-gallery {
+    grid-template-columns: 1fr;
+    padding: 0 1.2rem 1.2rem;
+  }
+
+  .conference-link {
+    width: 100%;
+  }
+}
