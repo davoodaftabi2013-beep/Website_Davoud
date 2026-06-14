@@ -105,8 +105,8 @@
   const lightboxImg = document.getElementById("imageLightboxImg");
   const lightboxClose = document.getElementById("imageLightboxClose");
 
-  document.querySelectorAll(".gallery-grid img, .conference-gallery img").forEach((img) => {
-    img.addEventListener("click", () => {
+document.querySelectorAll(".gallery-page-grid img, .conference-gallery img").forEach((img) => {
+  img.addEventListener("click", () => {
       lightboxImg.src = img.src;
       lightboxImg.alt = img.alt;
       lightbox.classList.add("active");
