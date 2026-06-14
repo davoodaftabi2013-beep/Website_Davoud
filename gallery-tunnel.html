@@ -87,5 +87,42 @@
       <span>Tunnelbau</span>
     </div>
   </footer>
+  <div class="image-lightbox" id="imageLightbox">
+  <span class="image-lightbox-close" id="imageLightboxClose">&times;</span>
+  <img id="imageLightboxImg" src="" alt="">
+</div>
+
+  <script>
+  const lightbox = document.getElementById("imageLightbox");
+  const lightboxImg = document.getElementById("imageLightboxImg");
+  const lightboxClose = document.getElementById("imageLightboxClose");
+
+  document.querySelectorAll(".gallery-grid img, .conference-gallery img").forEach((img) => {
+    img.addEventListener("click", () => {
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightbox.classList.add("active");
+    });
+  });
+
+  lightboxClose.addEventListener("click", () => {
+    lightbox.classList.remove("active");
+    lightboxImg.src = "";
+  });
+
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) {
+      lightbox.classList.remove("active");
+      lightboxImg.src = "";
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      lightbox.classList.remove("active");
+      lightboxImg.src = "";
+    }
+  });
+  </script>
 </body>
 </html>
