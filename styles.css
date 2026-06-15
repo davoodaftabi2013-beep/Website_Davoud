@@ -282,6 +282,7 @@ video {
   color: var(--muted);
 }
 
+/* Old tag style - kept for other possible tag sections */
 .tags {
   display: flex;
   flex-wrap: wrap;
@@ -296,6 +297,59 @@ video {
   border-radius: 999px;
   font-weight: 700;
   font-size: 0.92rem;
+}
+
+/* Competence profile */
+.competence-panel {
+  margin-top: 1.4rem;
+}
+
+.competence-panel h3 {
+  margin: 0 0 1.1rem;
+  font-size: 1.35rem;
+  color: var(--text);
+}
+
+.competence-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.competence-group {
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+}
+
+.competence-group h4 {
+  margin: 0 0 0.65rem;
+  color: var(--primary-dark);
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.competence-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  color: #0c416b;
+  font-weight: 700;
+  font-size: 0.94rem;
+  line-height: 1.8;
+}
+
+.competence-tags span {
+  display: inline;
+}
+
+.competence-tags span:not(:last-child)::after {
+  content: " •";
+  margin-left: 0.35rem;
+  margin-right: 0.35rem;
+  color: #8aa4bd;
+  font-weight: 700;
 }
 
 /* Projects */
@@ -582,6 +636,14 @@ video {
 
   .gallery-intro-text {
     padding: 1.15rem 1.1rem;
+  }
+
+  .competence-group {
+    padding: 0.95rem 1rem;
+  }
+
+  .competence-tags {
+    font-size: 0.9rem;
   }
 }
 
